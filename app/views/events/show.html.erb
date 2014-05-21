@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @event.name %>
+</h1>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+	<%= @event.description %>
+</p>	
+
+<h3>Participants:</h2>
+
+<% @participants.each do |participant| %>
+   <%= participant.name %>
+<% end %>
+<br/>
+</br>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
